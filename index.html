@@ -7,14 +7,23 @@
 </head>
 <!-- In the HTML, have one input field where someone can enter in a temperature. -->
 	<body>
-		<p>Convert temperatures here!</p>
 		<form>
-			<label>Temperature you'd like to convert:</label>
-			<input type="text" value="Type Here">
+			<fieldset>
+				<legend>Convert temperatures here!</legend>
+				<label>Temperature you'd like to convert:</label>
+				<input type="text" value="Type Here">
 
 <!-- Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
-			<input type="radio" name="fahrenheit" value="fahrenheit">Fahrenheit
-			<input type="radio" name="celsius" value="celsius">Celsius		
+				<input type="radio" name="fahrenheit" value="fahrenheit">Fahrenheit
+				<input type="radio" name="celsius" value="celsius">Celsius	
+				<button type="button">Convert</button>	
+
+
+
+
+<!-- Create a button that, when clicked, displays the converted temperature. -->
+				<button type="button">Clear</button>
+			</fieldset>
 		</form>
 	<script type="text/javascript" src="converter.js"></script>	
 	</body>
@@ -26,7 +35,7 @@
 <!-- Create a block level element that will hold the text of the converted temperature. -->
 
 
-<!-- Create a button that, when clicked, displays the converted temperature. -->
+
 
 
 <!-- Create another button that, when clicked, clears any text in the input field. -->
