@@ -1,15 +1,15 @@
 /*If the temperature is greater than 90F/32C the color of the converted 
 temperature should be red.*/
 
-red-font {
+.red-font {
 	color: red;
 }
 
-blue-font {
+.blue-font {
 	color: blue;
 }
 
-green-font {
+.green-font {
 	color: green;
 }
 

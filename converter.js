@@ -1,6 +1,6 @@
 // Get a reference to the button element in the DOM
 var button = document.getElementById("converter");
-button.clickEvent("click", determineConverter);
+button.addEventListener("click", determineConverter);
 document.querySelector("#input-text").addEventListener("keyPress",
 	function (e) {
 		var key = e.which || e.keyCode;
@@ -11,7 +11,7 @@ document.querySelector("#input-text").addEventListener("keyPress",
 
 // Create another button that, when clicked, clears any text in the input field.
 var clearButton = document.getElementById("clear");
-clearButton.clickEvent("click", clearText);
+clearButton.addEventListener("click", clearText);
 
 function clearText (){
 	document.getElementById("clear").value="";
@@ -27,35 +27,34 @@ function toFahrenheit (x) {
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
-function determineConverter (clickEvent) {
+function determineConverter () {
 // fahrenheit radio button is checked
 if(document.getElementById("fahrenheit").checked) {
 	var fah = document.getElementById("input-text").value;
 	var celOutput = toCelsius(fah);
-	document.getElementById("temp-output").innerHTML = "<p>" + 
+	document.getElementById("answer").innerHTML = "<p>" + 
 	celOutput +	" &deg; Celsius </p>";
 }
 //celsius radio button is checked
 else if(document.getElementById("celsius").checked) {
 	var cel = document.getElementById("input-text").value;
 	var fahOutput = toFahrenheit(cel);
-	document.getElementById("temp-output").innerHTML = "<p>" +
+	document.getElementById("answer").innerHTML = "<p>" +
 	fahOutput + " &deg; Fahrenheit </p>";
 	}
 
-if(celOutput > 32 || farOutput > 90) {
-	temp-output.className = "red-font";
+if(celOutput > 32 || fahOutput > 90) {
+	answer.className = "red-font";
 }
 
 else if(celOutput < 32 || farOutput < 0){
-	temp-output.className = "blue-font";
+	answer.className = "blue-font";
 }
 
 else {
 	answer.className = "green-font";
 }	
 
-  console.log("event", clickEvent);
 }
 
 
