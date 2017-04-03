@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <!-- In the HTML, have one input field where someone can enter in a temperature. -->
-	<body>
+	<body id="body">
 		<form>
 			<fieldset>
 				<legend>Convert temperatures here!</legend>
@@ -14,8 +14,8 @@
 				<input id="input-text" type="text" placeholder="Type Here">
 
 <!-- Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
-				<input type="radio" name="fahrenheit" id="fahrenheit">Fahrenheit
-				<input type="radio" name="celsius" id="celsius">Celsius	
+				<input type="radio" name="degree" id="fahrenheit">Fahrenheit
+				<input type="radio" name="degree" id="celsius">Celsius	
 				
 <!-- Create a button that, when clicked, displays the converted temperature. -->
 				<button type="button" id="converter">Convert</button>
