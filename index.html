@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta char="utf-8">
+	<title>F to C | C to F</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<!-- In the HTML, have one input field where someone can enter in a temperature. -->
+	<body id="body">
+		<form>
+			<fieldset>
+				<legend>Convert temperatures here!</legend>
+				<label>Temperature you'd like to convert:</label>
+				<input id="input-text" type="text" placeholder="Type Here">
+
+<!-- Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to. -->
+				<input type="radio" name="degree" id="fahrenheit">Fahrenheit
+				<input type="radio" name="degree" id="celsius">Celsius	
+				
+<!-- Create a button that, when clicked, displays the converted temperature. -->
+				<button type="button" id="converter">Convert</button>
+
+<!-- Create a block level element that will hold the text of the converted temperature. -->	
+				<div id="answer">
+					
+				</div>			
+
+
+
+				<button type="button" id="clear">Clear</button>
+
+
+			</fieldset>
+		</form>
+	<script type="text/javascript" src="./converter.js"></script>	
+	</body>
+
+<!-- Add an event handler to the input field that checks if the user pressed the enter key, and if that happens, perform the conversion. -->
+
+</html>
